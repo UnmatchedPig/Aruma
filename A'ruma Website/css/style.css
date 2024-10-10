@@ -1,0 +1,703 @@
+/* Initializing/'resetting' everything */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Website body */
+body {
+  height: 2500px;
+  overflow-x: hidden;
+}
+
+/* Creating shortcuts for colors so I don't have to enter hexadecimal for often used colours */
+:root {
+    --light-blue: 4891ff;
+
+}
+
+/* Note: Adjust font size and logo size of navbar later */
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+nav {
+  position: -webkit-sticky;
+  top: 0;
+  height: 98px;
+  width: 100%;
+  background: transparent;
+  transition: background 0.7s; /* Transition time of navbar change */
+}
+
+nav.scrolled {
+  background: #0a0a0a;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* To make the navbar spread out horizontally */
+.navbar .main-menu ul {
+    display: flex;
+}
+
+/* To spread out and align the navbar */
+.navbar ul li a {
+    padding: 35px 20px;
+	  display: block;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+/* hover effect of navbar */
+.navbar ul li a:hover {
+    color: #7fbe44;
+}
+
+/* Control size of the logo */
+.navbar .logo {
+	position: relative;  
+  max-width: 160px;
+  top: 8px;
+}
+
+/* Hero */
+
+.hero-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
+  text-align: center; /* Center text */
+  position: relative;
+  top: 0; 
+  padding: 240px 0 0;
+}
+
+.container-video {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 128.1vh; /* viewport instead of px for responsiveness */
+  overflow: hidden; 
+}
+
+.container-video video {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.hero-heading {
+  color: #fff;
+  font-size: 3rem; 
+}
+
+.hero-text {
+  color: #fff;
+  font-size: 1.5rem; 
+  transform: translateY(-30px); /* move text upwards */
+}
+
+/* responsive text for laptop */
+@media (max-width: 1366px) {
+
+  .hero-content {
+    padding: 120px 0 0 !important;
+  }
+
+  .hero-heading {
+      font-size: 3.5rem !important; 
+  }
+
+  .hero-text {
+      font-size: 1.3rem !important; 
+  }
+
+  .container {
+      padding: 0 10px !important;
+  }
+}
+
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+	height: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* text Classes */
+.text-xxl {
+    font-size: 3.5vw;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 400px;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2vw;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Middle section text */
+
+.middle-heading {
+	position: absolute;
+	top: 1432px;
+	left: 0px;
+	margin: 60px;
+}
+
+/* about us body text */
+.container2 {
+	width: 500px;
+	height: 100px;
+	max-width: 100%;
+	max-height: 150px;
+	margin: 60px;
+	position: absolute;
+	top: 1470px;
+}
+
+/* about us image */
+.container3 {
+	width: 951px;
+	height: 751px;
+	overflow: hidden;
+	position: absolute;
+	top: 1269px;
+	right: 0px;
+	z-index: -1;
+}
+
+/* our palate image */
+.container4 {
+	width: 952px;
+	height: 850px;
+	overflow: hidden;
+	position: absolute;
+	top: 2020px;
+	left: 0px;
+	z-index: -1;
+}
+
+/* Our palate heading */
+.container5 {
+	position: absolute;
+	top: 2100px;
+	right: 650px;
+	margin: 60px;
+}
+
+/* our palate body text */
+.container6 {
+	width: 500px;
+	height: 100px;
+	max-width: 100%;
+	max-height: 150px;
+	margin: 60px;
+	right: 308px;
+	position: absolute;
+	top: 2180px;
+}
+
+/* catering image */
+.container7 {
+	width: 951px;
+	height: 750px;
+	overflow: hidden;
+	position: absolute;
+	top: 2703px;
+	right: 0px;
+	z-index: -1;
+}
+
+/* catering heading */
+.container8 {
+    position: absolute;
+	top: 2780px;
+	left: 0px;
+	margin: 60px;
+}
+
+/* catering body text */
+.container9 {
+	width: 500px;
+	height: 100px;
+	max-width: 100%;
+	max-height: 150px;
+	margin: 60px;
+	left: 0;
+	position: absolute;
+	top: 2860px;
+	
+}
+
+/* responsive design for laptop */
+
+@media (max-width: 1366px) {
+
+  /* images */
+  .container3 {
+    width: 683px;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 980px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  .container4 {
+    width: 683px;
+    height: 850px;
+    overflow: hidden;
+    position: absolute;
+    top: 1525px;
+    left: 0px;
+    z-index: -1;
+  }
+    
+  .container7 {
+    width: 683px;
+    height: 750px;
+    overflow: hidden;
+    position: absolute;
+    top: 2014px;
+    right: 0px;
+    z-index: -1;
+}
+
+  /* Headings */
+  .middle-heading {
+    position: absolute;
+    top: 1032px;
+    left: 0px;
+    margin: 60px;
+  }
+
+  .container5 {
+    position: absolute;
+    top: 1530px;
+    margin-right: -185px;
+  }
+
+  .container8 {
+  position: absolute;
+	top: 2780px;
+	left: 0px;
+	margin: 60px;
+}
+
+}
+
+@media (max-width: 1280px) {
+
+  /* images */
+  .container3 {
+    width: 632px;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 809px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  .container4 {
+    width: 631px;
+    height: 840px;
+    overflow: hidden;
+    position: absolute;
+    top: 1314px;
+    left: 0px;
+    z-index: -1;
+  }
+    
+  .container7 {
+    width: 632px;
+    height: 750px;
+    overflow: hidden;
+    position: absolute;
+    top: 1766px;
+    right: 0px;
+    z-index: -1;
+}
+
+  /* Headings */
+  .middle-heading {
+    position: absolute;
+    top: 875px;
+    left: 0px;
+    margin: 50px;
+  }
+
+  .container5 {
+    position: absolute;
+    top: 1300px;
+    margin-right: -220px;
+  }
+
+  .container8 {
+  position: absolute;
+	top: 1770px;
+	left: 0px;
+	margin: 50px;
+  }
+
+  /*body text */
+
+  .container2 {
+    width: 500px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 150px;
+    margin: 50px;
+    position: absolute;
+    top: 910px;
+  }
+  
+  .container6 {
+    width: 500px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 150px;
+    margin-right: -220px;
+    position: absolute;
+    top: 1377px;
+  }  
+
+  .container9 {
+    width: 500px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 150px;
+    margin: 50px;
+    position: absolute;
+    top: 1845px;    
+  }
+
+}
+
+
+/* bottom section */
+
+/* bottom bg */
+.container10 {
+	overflow: hidden;
+	position: absolute;
+	top: 3500px;
+	right: 0px;
+	z-index: -1;
+}
+
+/* buttons */
+.button {
+  border: none;
+  color: white;
+  padding: 12px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+/* menu button*/
+.button1 {
+  background-color: transparent; 
+  color: black; 
+  border: 1.5px solid #000000;
+  font-family: 'Karla', sans-serif;
+  position: absolute;
+  top: 2425px;
+  right: 663px;
+}
+
+/* reservation button */
+.button2 {
+    background-color: transparent; 
+    color: black; 
+    border: 1.5px solid #000000;
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+    top: 1660px;
+    left: 0px;
+    margin: 60px;
+  }
+
+/* contact button */
+.button3 {
+background-color: transparent; 
+color: black; 
+border: 1.5px solid #000000;
+font-family: 'Karla', sans-serif;
+position: absolute;
+top: 3045px;
+left: 0px;
+margin: 60px;
+}
+
+/* privacy policy button */
+.button4 {
+  background-color: transparent; 
+  color: black; 
+  border: 1.5px solid #000000;
+  font-family: 'Karla', sans-serif;
+  position: absolute;
+  padding: 12px 150px;
+  top: 375px;
+  right: 775px;
+}
+
+/* responsive buttons */
+@media (max-width: 1280px) {
+
+  .button1 {
+    top: 1620px;
+    right: 383px;
+  }
+
+  .button2 {
+    top: 1100px;
+    margin: 50px;
+  }
+
+  .button3 {
+    top: 2035px;
+    margin: 50px;
+    }
+
+}
+
+
+.button1:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.button2:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+.button3:hover {
+background-color: #000000;
+color: white;
+}
+
+.button4:hover {
+  background-color: #000000;
+  color: white;
+  }
+  
+
+/* Footer section */
+
+.site-footer{
+
+  background-color:#f6f6f6;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  margin-top: 1880px; /* Control footer height */
+
+}
+.site-footer hr {
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+
+/* To style the footer headings */
+.site-footer h6 {
+  color:#000000;
+  font-size:18px;
+  margin-top:5px;
+  font-family: 'Karla', sans-serif;
+}
+
+/* colour of body text in footer */
+.site-footer a {
+  color:#737373;
+}
+
+/* Hover transition time for footer links */
+.footer-links a {
+  transition: 0.7s
+}
+
+/* Hover colour for footer links */
+.footer-links a:hover {
+  color:#7fbe44;
+}
+
+/* To push icons to right side of the screen */
+.site-footer .social-icons {
+  text-align:right
+}
+
+/* To style the footer icons */
+.site-footer .social-icons a {
+  width:35px;
+  height:40px;
+  margin-left:6px;
+  margin-top: -15px;
+  margin-right:0;
+}
+
+.copyright-text {
+  margin:0
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px) {
+
+  .site-footer {
+
+    padding-bottom:0
+
+  }
+
+  .site-footer .copyright-text,.site-footer .social-icons {
+    text-align:center
+  }
+
+}
+
+.social-icons {
+
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+
+}
+
+.social-icons li {
+
+  display:inline-block;
+  margin-bottom:4px
+
+}
+
+.social-icons a {
+
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+
+}
+
+.social-icons.size-sm a {
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+@media (max-width:767px) {
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+@media (max-width:1280px) {
+
+  .site-footer{
+  margin-top: 860px; /* Control footer height */
+ }
+
+}

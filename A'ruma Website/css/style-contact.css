@@ -1,0 +1,371 @@
+/* Initializing/'resetting' everything */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Website body */
+body {
+    height: 1600px;
+    overflow-x: hidden;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    background: #fff;
+}
+
+/* Creating shortcuts for colors so I don't have to enter hexadecimal for often used colors */
+:root {
+    --light-blue: 4891ff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+nav {
+    position: -webkit-sticky;
+    top: 0;
+    height: 98px;
+    width: 100%;
+    background: transparent;
+    transition: background 0.7s; /* Transition time of navbar change */
+}
+
+nav.scrolled {
+    background: #0a0a0a;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* To make the navbar spread out horizontally */
+.navbar .main-menu ul {
+    display: flex;
+}
+
+/* To spread out and align the navbar */
+.navbar ul li a {
+    padding: 35px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+/* hover effect of navbar */
+.navbar ul li a:hover {
+    color: #7fbe44;
+}
+
+/* Control size of the logo */
+.navbar .logo {
+    position: relative;
+    max-width: 160px;
+    top: 8px;
+}
+
+/* main section */
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 92vh; /* viewport instead of px for responsiveness */
+  z-index: -1;
+  overflow: hidden; 
+}
+
+@media (max-width:1500px)
+{
+  .background-image {
+    height: 150vh;
+  }
+}
+
+.background-image img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.top-heading {
+  font-size: 3.5rem;
+}
+
+.container1 {
+    margin: 0 auto;
+    margin-top: 275px;
+    color: #fff;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* text Classes */
+.text-xxl {
+    font-size: 3.5vw;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 400px;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2vw;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    width: 40%; /* To control size of the form */
+    min-width: 300px; /*  Form does not become too thin on smaller screens */
+    text-align: center;
+    position: relative;
+    margin-left: 70px;
+    margin-top: 570px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #000;
+    border: 1.5px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.contact-form button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* google map */
+.map-container {
+    width: 800px;
+    height: 450px; 
+    position: relative; 
+    left: 52%; 
+    top: -390px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds shadow behind map */
+}
+
+@media (max-width:1500px)
+{
+  .map-container {
+    width: 500px;
+  }
+}
+
+/* Footer section */
+
+.site-footer{
+
+  background-color:#f6f6f6;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  margin-top: -300px; /* Control footer height */
+
+}
+.site-footer hr {
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+
+/* To style the footer headings */
+.site-footer h6 {
+  color:#000000;
+  font-size:18px;
+  margin-top:5px;
+  font-family: 'Karla', sans-serif;
+}
+
+/* colour of body text in footer */
+.site-footer a {
+  color:#737373;
+}
+
+/* Hover transition time for footer links */
+.footer-links a {
+  transition: 0.7s
+}
+
+/* Hover colour for footer links */
+.footer-links a:hover {
+  color:#7fbe44;
+}
+
+/* To push icons to right side of the screen */
+.site-footer .social-icons {
+  text-align:right
+}
+
+/* To style the footer icons */
+.site-footer .social-icons a {
+  width:35px;
+  height:40px;
+  margin-left:6px;
+  margin-top: -15px;
+  margin-right:0;
+}
+
+.copyright-text {
+  margin:0
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px) {
+
+  .site-footer {
+
+    padding-bottom:0
+
+  }
+
+  .site-footer .copyright-text,.site-footer .social-icons {
+    text-align:center
+  }
+
+}
+
+.social-icons {
+
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+
+}
+
+.social-icons li {
+
+  display:inline-block;
+  margin-bottom:4px
+
+}
+
+.social-icons a {
+
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+
+}
+
+.social-icons.size-sm a {
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+@media (max-width:767px) {
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
